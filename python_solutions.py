@@ -1,5 +1,4 @@
 # Kata: Multiples of 3 or 5
-# Solution:
 def solution(number):
     if number < 0:
         return 0
