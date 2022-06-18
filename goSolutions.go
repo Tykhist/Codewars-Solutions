@@ -1,8 +1,9 @@
 /* 
-06/16/22
-Kata: Multiples of 3 or 5
-Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in. 
-Additionally, if the number is negative, return 0 (for languages that do have them).
+Kata: Isograms
+Rank: 7 kyu
+An isogram is a word that has no repeating letters, consecutive or non-consecutive. 
+Implement a function that determines whether a string that contains only letters is an isogram. 
+Assume the empty string is an isogram. Ignore letter case.
 */
 package kata
 
