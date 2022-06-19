@@ -58,6 +58,7 @@ def DNA_strand(dna):
 
 """
 Kata: Playing with digits
+Rank: 6 kyu
 Some numbers have funny properties. For example:
 89 --> 8¹ + 9² = 89 * 1
 695 --> 6² + 9³ + 5⁴= 1390 = 695 * 2
@@ -90,3 +91,42 @@ def dig_pow(n, p):
         return sum(exponents) / n
 
     return -1
+
+"""
+Kata: Mexican Wave (https://en.wikipedia.org/wiki/Wave_(audience))
+Rank: 6 kyu
+In this simple Kata your task is to create a function that turns a string into a Mexican Wave. 
+You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up. 
+Rules:
+The input string will always be lower case but maybe empty.
+If the character in the string is whitespace then pass over it as if it was an empty seat
+"""
+def wave(people):
+    """
+    1. Initialize results list
+    2. Iterate through string letters
+    3. If letter is blank, skip iteration (continue)
+    4. Capitalize each letter, lower the previous one (if applicable),
+    and save the word in this state to the results list
+    5. Return results
+    """
+    # Code below is one line, with line breaks for readability
+    return [
+        "".join(
+            [people[:i].lower(), people[i].upper(), people[i+1:].lower()]
+        ) \
+        for i in range(len(people)) \
+        if people[i] != " "
+    ]
+    
+    # Code below was made before refactoring, and is more readable
+    """
+    results = []
+    for i in range(len(people)):
+        if people[i] == "" or people[i] == " ":
+            continue
+        results.append("".join(
+            [people[:i].lower(), people[i].upper(), people[i+1:].lower()]
+        ))
+    return results
+    """
