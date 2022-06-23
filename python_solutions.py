@@ -139,3 +139,34 @@ and strings and returns a new list with the strings filtered out.
 """
 def filter_list(l):
     return [x for x in l if type(x) == type(int())]
+
+"""
+Kata: Human Readable Time
+Rank: 5 kyu
+Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)
+
+HH = hours, padded to 2 digits, range: 00 - 99
+MM = minutes, padded to 2 digits, range: 00 - 59
+SS = seconds, padded to 2 digits, range: 00 - 59
+The maximum time never exceeds 359999 (99:59:59)
+
+You can find some examples in the test fixtures.
+"""
+def make_readable(seconds):
+    hr = 0
+    mn = 0
+    
+    if seconds >= 359999:
+        return "99:59:59"
+    
+    if seconds > 60*60-1:
+        remainder = seconds % (60*60)
+        hr = (seconds - remainder) / (60*60)
+        seconds = remainder
+        
+    if seconds > 59:
+        remainder = seconds % 60
+        mn = (seconds - remainder) / 60
+        seconds = remainder
+        
+    return f"{int(hr):02}:{int(mn):02}:{int(seconds):02}"
