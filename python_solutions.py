@@ -170,3 +170,17 @@ def make_readable(seconds):
         seconds = remainder
         
     return f"{int(hr):02}:{int(mn):02}:{int(seconds):02}"
+
+"""
+Kata: Counting Duplicates
+Rank: 6 kyu
+Write a function that will return the count of distinct case-insensitive alphabetic characters 
+and numeric digits that occur more than once in the input string. The input string can be 
+assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+"""
+def duplicate_count(text):
+    count = 0
+    for i in set(text.lower()):
+        if text.lower().count(i) > 1:
+            count += 1
+    return count
