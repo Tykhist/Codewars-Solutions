@@ -214,3 +214,29 @@ def get_middle(s):
 #     else:
 #         return s[halfish]
     return (s[half-1] + s[half]) if len(s)%2 == 0 else s[half]
+
+"""
+Kata: Reverse words
+Rank: 7 kyu
+Complete the function that accepts a string parameter, and reverses 
+each word in the string. All spaces in the string should be retained.
+"""
+def reverse_words(text):
+    boop = []
+    no_space = ""
+    for i in text: 
+        if i == " ":
+            no_space += " ~ " 
+        else:
+            no_space += i
+    no_space = no_space.split()
+
+    for word in no_space:
+        reverse = []
+        for i in word:
+            reverse.append(i)
+        rev = "".join(reversed(reverse))
+        boop.append(rev)
+    boop = [" " if i == "~" else i for i in boop]
+    return "".join(boop)
+            
