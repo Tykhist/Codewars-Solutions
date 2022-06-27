@@ -208,9 +208,9 @@ You are going to be given a word. Your job is to return the middle character of 
 If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 """
 def get_middle(s):
-    halfish = len(s) // 2
+    half = len(s) // 2
 #     if len(s) % 2 == 0:
 #         return f"{s[halfish - 1]}{s[halfish]}"
 #     else:
 #         return s[halfish]
-    return f"{s[halfish - 1]}{s[halfish]}" if len(s) % 2 == 0 else s[halfish]
+    return (s[half-1] + s[half]) if len(s)%2 == 0 else s[half]
