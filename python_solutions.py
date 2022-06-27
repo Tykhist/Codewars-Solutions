@@ -259,11 +259,12 @@ spinWords( "This is another test" )=> returns "This is rehtona test"
 """
 # Note that since the last kata, I realized that a word can be reversed simply by using word[::-1]
 def spin_words(sentence):
-    result = []
-    words = sentence.split()
-    for letter in words:
-        if len(letter) >= 5:
-            result.append(letter[::-1])
-        else:
-            result.append(letter)
+    result = [letter[::-1] if len(letter) >= 5 else letter for letter in sentence.split()]
+#     result = []
+#     words = sentence.split()
+#     for letter in words:
+#         if len(letter) >= 5:
+#             result.append(letter[::-1])
+#         else:
+#             result.append(letter)
     return " ".join(result)
