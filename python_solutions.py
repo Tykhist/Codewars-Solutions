@@ -222,21 +222,28 @@ Complete the function that accepts a string parameter, and reverses
 each word in the string. All spaces in the string should be retained.
 """
 def reverse_words(text):
-    boop = []
-    no_space = ""
-    for i in text: 
-        if i == " ":
-            no_space += " ~ " 
-        else:
-            no_space += i
-    no_space = no_space.split()
+    result = []
+    
+    """
+    Replaces the spaces from input with placeholders (~), 
+    and splits entire string into a list
+    """
+    no_space = "".join([" ~ " if i == " " else i for i in text]).split()
 
     for word in no_space:
-        reverse = []
-        for i in word:
-            reverse.append(i)
-        rev = "".join(reversed(reverse))
-        boop.append(rev)
-    boop = [" " if i == "~" else i for i in boop]
-    return "".join(boop)
+        """
+        Splits every word into a list of letters, reverses 
+        the letters, and joins the list back into a string
+        """
+        reverse = "".join(reversed([i for i in word]))
+        
+        """
+        Adds either the newly reversed word to the result,
+        or a space if the word is a placeholder (~)
+        """
+        result.append(reverse) if word != "~" else result.append(" ")
+        
+    """ Joins list of reversed words into one string """
+    return "".join(result)
+            
             
