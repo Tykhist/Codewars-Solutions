@@ -341,5 +341,5 @@ unique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 unique_in_order([1,2,2,3,3])       == [1,2,3]
 """
 def unique_in_order(iterable):
-    if iterable == None: return iterable
+    if len(iterable) <= 0: return []
     return [iterable[i] for i in range(len(iterable)-1) if iterable[i] != iterable[i+1]] + [iterable[-1] if len(iterable) > 0 else None]
