@@ -474,3 +474,17 @@ def sort_array(source_array):
             source_array[i] = odd[count]
             count += 1
     return source_array
+
+"""
+Kata: Shortest Word
+Rank: 7 kyu
+Simple, given a string of words, return the length of the shortest word(s).
+String will never be empty and you do not need to account for different data types.
+"""
+def find_short(s):
+    s = s.split()
+    l = s[0]
+    for i in s:
+        if len(i) < len(l):
+            l = i
+    return len(l) # l: shortest word length
