@@ -541,3 +541,25 @@ Have fun!
 """
 def odd_or_even(arr):
     return "even" if sum(arr) % 2 == 0 else "odd"
+
+"""
+Kata: Exes and Ohs
+Rank: 7 kyu
+Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+Examples input/output:
+XO("ooxx") => true
+XO("xooxx") => false
+XO("ooxXm") => true
+XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+XO("zzoo") => false
+"""
+def xo(s):
+    o_count = 0
+    x_count = 0
+    
+    for i in s.lower():
+        if i == 'o': o_count += 1
+        elif i == 'x': x_count += 1
+        
+    return True if o_count == x_count else False
