@@ -563,3 +563,24 @@ def xo(s):
         elif i == 'x': x_count += 1
         
     return True if o_count == x_count else False
+
+"""
+Kata: Remove the minimum
+Rank: 7 kyu
+Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, 
+remove the one with a lower index. If you get an empty array/list, return an empty array/list. Don't change the order of the elements that are left.
+
+Examples
+* Input: [1,2,3,4,5], output= [2,3,4,5]
+* Input: [5,3,2,1,4], output = [5,3,2,4]
+* Input: [2,2,1,2,1], output = [2,2,2,1]
+"""
+def remove_smallest(numbers):
+    result = numbers[:]
+    low = result[0] if len(result) > 0 else result
+    for i in result:
+        if i < low:
+            low = i
+    if len(result) > 0:
+        result.remove(low)
+    return result
