@@ -521,3 +521,23 @@ For example, when an array is passed like [19, 5, 42, 2, 77], the output should 
 def sum_two_smallest_numbers(numbers):
     result = sorted([i for i in numbers if i >= 0])
     return result[0] + result[1]
+
+"""
+Kata: Odd or Even?
+Rank: 7 kyu
+Given a list of integers, determine whether the sum of its elements is odd or even.
+Give your answer as a string matching "odd" or "even".
+If the input array is empty consider it as: [0] (array with a zero).
+
+Examples:
+Input: [0]
+Output: "even"
+Input: [0, 1, 4]
+Output: "odd"
+Input: [0, -1, -5]
+Output: "even"
+
+Have fun!
+"""
+def odd_or_even(arr):
+    return "even" if sum(arr) % 2 == 0 else "odd"
