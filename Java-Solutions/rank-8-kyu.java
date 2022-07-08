@@ -44,3 +44,20 @@ public class BasicOperations
     return num;
   }
 }
+
+/*
+Kata: Convert a Number to a String!
+Rank: 8 kyu
+We need a function that can transform a number into a string.
+What ways of achieving this do you know?
+
+Examples:
+123 --> "123"
+999 --> "999"
+*/
+class Kata {
+  public static String numberToString(int num) {
+    String result = "";
+    return result + num;
+  }
+}
