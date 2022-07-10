@@ -233,3 +233,26 @@ def longest_consec(strarr, k):
         combos.append(temp)
     combos = sorted(combos, key=lambda x: len(x), reverse=True)
     return combos[0] if k > 0 and k <= len(strarr) else ""
+
+"""
+Kata: Break camelCase
+Rank: 6 kyu
+Complete the solution so that the function will break up camel casing, using a space between words.
+
+Example
+"camelCasing"  =>  "camel Casing"
+"identifier"   =>  "identifier"
+""             =>  ""
+"""
+def solution(s):
+    if s == s.lower():
+        return s
+    result = []
+    temp = ""
+    for i in s:
+        if i.islower():
+            temp += i
+        else:
+            result.append(temp)
+            temp = i
+    return " ".join(result + [temp])
