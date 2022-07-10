@@ -329,3 +329,7 @@ Examples:(Input --> Output)
 def series_sum(n):
     series = [(1/(1+i*3)) for i in range(n)]
     return f"{sum(series):.2f}"
+
+"""
+Kata: Binary Addition
+Rank: 7 kyu
