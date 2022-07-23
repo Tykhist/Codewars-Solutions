@@ -8,3 +8,16 @@ def square_sum(numbers):
     result = [i ** 2 for i in numbers]
     return sum(result)
 
+"""
+Kata: Double Char
+Rank: 8 kyu
+Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+Examples (Input -> Output):
+* "String"      -> "SSttrriinngg"
+* "Hello World" -> "HHeelllloo  WWoorrlldd"
+* "1234!_ "     -> "11223344!!__  "
+Good Luck!
+"""
+def double_char(s):
+    return "".join(i+i for i in s)
