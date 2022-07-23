@@ -415,5 +415,22 @@ def find_next_square(sq):
     square = math.sqrt(sq)
     return (square+1)**2 if square == int(square) else -1
 
+"""
+Kata: Regex validate PIN code
+Rank: 7 kyu
+ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
 
+If the function is passed a valid PIN string, return true, else return false.
+
+Examples (Input --> Output)
+"1234"   -->  true
+"12345"  -->  false
+"a234"   -->  false
+"""
+def validate_pin(pin):
+    if len(pin) != 4 and len(pin) != 6: return False
+    for i in pin:
+        if i.isnumeric(): continue
+        else: return False
+    return True
 
