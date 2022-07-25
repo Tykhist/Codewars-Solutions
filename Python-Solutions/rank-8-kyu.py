@@ -21,3 +21,12 @@ Good Luck!
 """
 def double_char(s):
     return "".join(i+i for i in s)
+
+"""
+Kata: Calculate average
+Rank: 8 kyu
+Write a function which calculates the average of the numbers in a given list.
+Note: Empty arrays should return 0.
+"""
+def find_average(numbers):
+    return sum(numbers) / len(numbers)
