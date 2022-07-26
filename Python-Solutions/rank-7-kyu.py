@@ -466,3 +466,15 @@ Output string must be two numbers separated by a single space, and highest numbe
 def high_and_low(numbers):
     numbers = [int(i) for i in numbers.split()]
     return f"{max(numbers)} {min(numbers)}"
+
+"""
+Kata: Is It Negative Zero (-0)?
+Rank: 7 kyu
+There exist two zeroes: +0 (or just 0) and -0.
+Write a function that returns true if the input number is -0 and false otherwise (True and False for Python).
+
+In JavaScript / TypeScript / Coffeescript the input will be a number.
+In Python / Java / C / NASM / Haskell / the input will be a float.
+"""
+def is_negative_zero(n):
+    return True if n == -0.0 and "-" in str(n) else False
