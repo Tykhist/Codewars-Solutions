@@ -478,3 +478,16 @@ In Python / Java / C / NASM / Haskell / the input will be a float.
 """
 def is_negative_zero(n):
     return True if n == -0.0 and "-" in str(n) else False
+
+"""
+Kata: Vowel one
+Rank: 7 kyu
+Write a function that takes a string and outputs a strings of 1's and 0's where vowels become 1's and non-vowels become 0's.
+All non-vowels including non alpha characters (spaces,commas etc.) should be included.
+
+Examples:
+vowelOne "abceios" -- "1001110"
+vowelOne "aeiou, abc" -- "1111100100"
+"""
+def vowel_one(s):
+    return "".join(['1' if i.lower() in "aeiou" else '0' for i in s])
