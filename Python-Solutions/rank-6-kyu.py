@@ -306,3 +306,18 @@ Examples:
 def solution(s):
     if len(s) % 2: s += "_"
     return [s[i-1] + s[i] for i in range(1, len(s), 2)] if s else []
+
+"""
+Kata: Detect Pangram
+Rank: 6 kyu
+A pangram is a sentence that contains every single letter of the alphabet at least once. For 
+example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it 
+uses the letters A-Z at least once (case is irrelevant). Given a string, detect whether or not 
+it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+"""
+def is_pangram(s):
+    for i in "abcdefghijklmnopqrstuvwxyz":
+        if i not in s.lower():
+            return False
+    return True
+
