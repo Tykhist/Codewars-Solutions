@@ -30,3 +30,21 @@ Note: Empty arrays should return 0.
 """
 def find_average(numbers):
     return sum(numbers) / len(numbers)
+
+"""
+Kata: Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+Rank: 8 kyu
+Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string. 
+For a beginner kata, you can assume that the input data is always a non empty string, no need to verify it.
+
+Examples
+remove("Hi!") === "Hi!"
+remove("Hi!!!") === "Hi!"
+remove("!Hi") === "Hi!"
+remove("!Hi!") === "Hi!"
+remove("Hi! Hi!") === "Hi Hi!"
+remove("Hi") === "Hi!"
+"""
+def remove(s):
+    return "".join([i for i in s if i != "!"]) + "!"
+
