@@ -506,3 +506,28 @@ var array = [["white", "goodness"], ...] returns [{'white': 'goodness'}, ...]
 def colour_association(arr):
     return [{color[0]: color[1]} for color in arr]
 
+"""
+Kata: String destroyer
+Rank: 7 kyu
+You have a starting string of the lowercase alphabet, space-separated:
+"a b c d e f g h i j k l m n o p q r s t u v w x y z"
+Then you are given random sets of letters to throw against this string. For example:
+{'e', 'B', 'F', 'i'}
+Whenever there is a match (case sensitive), the letter in the original string is knocked out 
+and replaced by an underscore. Using the random set above as an example would result in:
+"a b c d _ f g h _ j k l m n o p q r s t u v w x y z"
+
+Write a function destroyer(input_sets) that takes input as a tuple of one or more of these random character 
+sets and returns the alphabet formatted as shown, with underscores showing where matches knocked out a letter.
+For example:
+>>> input_sets = ({'A', 'b'}, {'d', 'C', 'b'})
+>>> destroyer(input_sets)
+>>> "a _ c _ e f g h i j k l m n o p q r s t u v w x y z"
+"""
+def destroyer(input_sets):
+    result = "a b c d e f g h i j k l m n o p q r s t u v w x y z"
+    for i in result:
+        for j in range(len(input_sets)):
+            if i in input_sets[j]:
+                result = result.replace(i, "_")
+    return result
