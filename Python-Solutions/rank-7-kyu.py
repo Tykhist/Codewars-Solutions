@@ -531,3 +531,13 @@ def destroyer(input_sets):
             if i in input_sets[j]:
                 result = result.replace(i, "_")
     return result
+
+"""
+Kata: Number of Decimal Digits
+Rank: 7 kyu
+Determine the total number of digits in the integer (n>=0) given as input to the function. For example, 
+9 is a single digit, 66 has 2 digits and 128685 has 6 digits. Be careful to avoid overflows/underflows.
+All inputs will be valid.
+"""
+def digits(n):
+    return len(str(n))
