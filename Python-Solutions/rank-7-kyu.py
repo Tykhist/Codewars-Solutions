@@ -572,3 +572,24 @@ solution('abc', 'd') # returns false
 def solution(string, ending):
     return True if string[len(string) - len(ending):] == ending else False
 
+"""
+Kata: Switcheroo
+Rank: 7 kyu
+Given a string made up of letters a, b, and/or c, switch the position of letters a and b 
+(change a to b and vice versa). Leave any incidence of c untouched.
+
+Example:
+'acb' --> 'bca'
+'aabacbaa' --> 'bbabcabb'
+"""
+def switcheroo(s):
+    result = ""
+    for i in s:
+        if i == "a":
+            result += "b"
+        elif i == "b":
+            result += "a"
+        else:
+            result += i
+    return result
+
