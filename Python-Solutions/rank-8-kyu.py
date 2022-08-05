@@ -48,3 +48,14 @@ remove("Hi") === "Hi!"
 def remove(s):
     return "".join([i for i in s if i != "!"]) + "!"
 
+"""
+Kata: Reversed Strings
+Rank: 8 kyu
+Complete the solution so that it reverses the string passed into it.
+
+'world'  =>  'dlrow'
+'word'   =>  'drow'
+"""
+def solution(string):
+    return "".join([string[i] for i in range(len(string)-1, -1, -1)])
+
