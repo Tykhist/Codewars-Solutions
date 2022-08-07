@@ -59,3 +59,11 @@ Complete the solution so that it reverses the string passed into it.
 def solution(string):
     return "".join([string[i] for i in range(len(string)-1, -1, -1)])
 
+"""
+Kata: Function 3 - multiplying two numbers
+Rank: 8 kyu
+Implement a function which multiplies two numbers.
+"""
+def multiply(a, b):
+    return a * b
+
