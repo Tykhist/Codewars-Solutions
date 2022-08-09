@@ -610,4 +610,10 @@ def find_smallest(numbers,to_return):
     else:
         return numbers.index(min(numbers))Write a function that can return the smallest value of an array or the index of that value. The function's 2nd parameter will tell whether it should return the value or the index.
 
-
+"""
+Kata: Reverse list
+Rank: 7 kyu
+Write reverseList function that simply reverses lists.
+"""
+def reverse_list(lst):
+    return lst[::-1]
