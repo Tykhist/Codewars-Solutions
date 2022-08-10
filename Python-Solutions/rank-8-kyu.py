@@ -77,3 +77,11 @@ Return true if the array contains the value, false if not.
 """
 def check(seq, elem):
     return True if elem in seq else False
+
+"""
+Kata: Convert boolean values to strings 'Yes' or 'No'.
+Rank: 8 kyu
+Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+"""
+def bool_to_word(boolean):
+    return "Yes" if boolean else "No"
