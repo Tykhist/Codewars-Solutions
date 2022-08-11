@@ -636,3 +636,17 @@ Link to Jaden's former Twitter account @officialjaden via archive.org
 def to_jaden_case(string):
     return " ".join([i[0].upper() + i[1:].lower() for i in string.split(" ")]) if string else ""
 
+"""
+Kata: Testing 1-2-3
+Rank: 7 kyu
+Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+Write a function which takes a list of strings and returns each line prepended by the correct number.
+The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+
+Examples: (Input --> Output)
+[] --> []
+["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+"""
+def number(lines):
+    return [f"{i+1}: {lines[i]}" for i in range(len(lines))]
+
